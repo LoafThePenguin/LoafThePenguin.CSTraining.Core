@@ -1,0 +1,26 @@
+{
+  "$schema": "https://raw.githubusercontent.com/dotnet/Nerdbank.GitVersioning/master/src/NerdBank.GitVersioning/version.schema.json",
+  "version": "0.0",
+  "assemblyVersion": {
+    "precision": "revision"
+  },
+  "publicReleaseRefSpec": [
+    "^refs/heads/main",
+    "^refs/tags/v\\d+\\.\\d+"
+  ],
+  "pathFilters": [
+    ":!/version.json",
+    ":!/LoafThePenguin.CSTraining.Core.sln",
+    ":!/CODE_OF_CONDUCT.md",
+    ":!/README.md",
+    ":!/LICENSE",
+    ":!/Directory.Build.props",
+    ":!/.gitignore",
+    ":!/.editorconfig",
+    ":!/.github/",
+    ":!/tests/",
+    ":!/nuget.config"
+  ],
+  "gitCommitIdShortFixedLength": 3,
+  "semVer1NumericIdentifierPadding": 3
+}
