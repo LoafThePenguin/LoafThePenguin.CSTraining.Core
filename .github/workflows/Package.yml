@@ -70,7 +70,7 @@ jobs:
       - name: Pack Package
         run: dotnet pack "src/LoafThePenguin.CSTraining.Core/LoafThePenguin.CSTraining.Core.csproj" -c Release
       - name: Push Package
-        run: dotnet nuget push "**/artifacts/Release/nupkg/*.nupkg" --api-key ${{ secrets.GITHUB_TOKEN }} -s "LoafThePenguin" --skip-duplicate --no-symbols
+        run: dotnet nuget push "**/artifacts/Release/nupkg/*.nupkg" --api-key ${{ secrets.GITHUB_TOKEN }} -s "https://nuget.pkg.github.com/LoafThePenguin/index.json" --skip-duplicate --no-symbols
    
   tag: 
     name: Create Tag
