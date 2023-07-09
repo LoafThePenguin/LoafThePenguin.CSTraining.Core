@@ -1,9 +1,13 @@
+using System.Collections.Concurrent;
+using System.Drawing;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+
 namespace LoafThePenguin.CSTraining.Core.Cycles;
 
 /// <summary>
 /// Алгоритм определения всех простых чисел от 1 до <see cref="int.MaxValue"/> включительно.
 /// </summary>
-public sealed class AllSimpleNumbersToIntMaxValueAlgorithm : IAlgorithm<int[]>
+public sealed class AllSimpleNumbersToIntMaxValueAlgorithm : IAlgorithm<int, IEnumerable<int>>
 {
     private readonly IsNumberSimpleAlgorithm _isNumberSimpleAlgorithm;
 
@@ -13,20 +17,22 @@ public sealed class AllSimpleNumbersToIntMaxValueAlgorithm : IAlgorithm<int[]>
     public AllSimpleNumbersToIntMaxValueAlgorithm() => _isNumberSimpleAlgorithm = new IsNumberSimpleAlgorithm();
 
     /// <inheritdoc/>
-    public int[] Run()
+    /// <param name="count">
+    /// Количество чисел.
+    /// </param>
+    public IEnumerable<int> Run(int count)
     {
-        int[] simpleNumbers = new int[int.MaxValue];
-        IEnumerable<int[]> chunks = Enumerable
-            .Range(1, int.MaxValue)
-            .Chunk(int.MaxValue / 1000);
-        Parallel.ForEach(chunks, chunk =>
+        int returnsCount = 0;
+        int nextNubmer = 1;
+        while (returnsCount < count && nextNubmer <= int.MaxValue)
         {
-            foreach(int number in chunk)
+            if (_isNumberSimpleAlgorithm.Run(nextNubmer))
             {
-                simpleNumbers[number - 1] = number;
+                yield return nextNubmer;
+                returnsCount++;
             }
-        });
 
-        return simpleNumbers;
+            nextNubmer++;
+        }
     }
 }
