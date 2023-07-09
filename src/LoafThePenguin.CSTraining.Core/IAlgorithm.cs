@@ -14,3 +14,16 @@ public interface IAlgorithm<TInput, TOutput>
     /// <returns>Экземпляр выходного значения.</returns>
     TOutput Run(TInput input);
 }
+
+/// <summary>
+/// Базовый интерфейс алгоритма.
+/// </summary>
+/// <typeparam name="TOutput">Тип выходного значения.</typeparam>
+public interface IAlgorithm<TOutput>
+{
+    /// <summary>
+    /// Запускает алгоритм.
+    /// </summary>
+    /// <returns>Экземпляр выходного значения.</returns>
+    TOutput Run();
+}
