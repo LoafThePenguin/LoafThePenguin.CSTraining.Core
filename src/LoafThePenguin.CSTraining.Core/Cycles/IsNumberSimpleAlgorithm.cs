@@ -6,6 +6,14 @@ namespace LoafThePenguin.CSTraining.Core.Cycles;
 public sealed class IsNumberSimpleAlgorithm : IAlgorithm<int, bool>
 {
     /// <summary>
+    /// Создаёт экземпляр алгоритма проверки на простоту числа.
+    /// </summary>
+    public IsNumberSimpleAlgorithm()
+    {
+        
+    }
+
+    /// <summary>
     /// <inheritdoc/>
     /// </summary>
     /// <param name="input">

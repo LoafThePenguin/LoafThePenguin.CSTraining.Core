@@ -6,6 +6,14 @@ namespace LoafThePenguin.CSTraining.Core.TrustedAlgorithms.Condition;
 public sealed class IsNumberEvenAlgorithm : IAlgorithm<int, bool>
 {
     /// <summary>
+    /// Создаёт экземпляр алгоритма проверки числа на чётность.
+    /// </summary>
+    public IsNumberEvenAlgorithm()
+    {
+        
+    }
+
+    /// <summary>
     /// <inheritdoc/>
     /// </summary>
     /// <param name="input"></param>
