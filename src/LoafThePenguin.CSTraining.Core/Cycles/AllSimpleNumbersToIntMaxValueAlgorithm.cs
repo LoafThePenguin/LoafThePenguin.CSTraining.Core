@@ -3,7 +3,7 @@ namespace LoafThePenguin.CSTraining.Core.Cycles;
 /// <summary>
 /// Алгоритм определения всех простых чисел от 1 до <see cref="int.MaxValue"/> включительно.
 /// </summary>
-public sealed class AllSimpleNumbersToIntMaxValueAlgorithm : IAlgorithm<IEnumerable<int>>
+public sealed class AllSimpleNumbersToIntMaxValueAlgorithm : IAlgorithm<int[]>
 {
     private readonly IsNumberSimpleAlgorithm _isNumberSimpleAlgorithm;
 
@@ -13,14 +13,20 @@ public sealed class AllSimpleNumbersToIntMaxValueAlgorithm : IAlgorithm<IEnumera
     public AllSimpleNumbersToIntMaxValueAlgorithm() => _isNumberSimpleAlgorithm = new IsNumberSimpleAlgorithm();
 
     /// <inheritdoc/>
-    public IEnumerable<int> Run()
+    public int[] Run()
     {
-        for (int i = 1; i <= int.MaxValue; i++)
+        int[] simpleNumbers = new int[int.MaxValue];
+        IEnumerable<int[]> chunks = Enumerable
+            .Range(1, int.MaxValue)
+            .Chunk(int.MaxValue / 1000);
+        Parallel.ForEach(chunks, chunk =>
         {
-            if (_isNumberSimpleAlgorithm.Run(i))
+            foreach(int number in chunk)
             {
-                yield return i;
+                simpleNumbers[number - 1] = number;
             }
-        }
+        });
+
+        return simpleNumbers;
     }
 }
