@@ -5,7 +5,7 @@ namespace LoafThePenguin.CSTraining.Core;
 /// </summary>
 /// <typeparam name="TInput">Тип входного значения.</typeparam>
 /// <typeparam name="TOutput">Тип выходного значения.</typeparam>
-public interface IAlgorithm<TInput, TOutput>
+public interface IAlgorithm<in TInput, out TOutput>
 {
     /// <summary>
     /// Запускает алгоритм.
@@ -19,7 +19,7 @@ public interface IAlgorithm<TInput, TOutput>
 /// Базовый интерфейс алгоритма.
 /// </summary>
 /// <typeparam name="TOutput">Тип выходного значения.</typeparam>
-public interface IAlgorithm<TOutput>
+public interface IAlgorithm<out TOutput>
 {
     /// <summary>
     /// Запускает алгоритм.
