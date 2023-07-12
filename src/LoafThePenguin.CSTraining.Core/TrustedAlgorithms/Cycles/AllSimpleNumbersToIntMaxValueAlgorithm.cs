@@ -2,7 +2,7 @@ using System.Collections.Concurrent;
 using System.Drawing;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace LoafThePenguin.CSTraining.Core.Cycles;
+namespace LoafThePenguin.CSTraining.Core.TrustedAlgorithms.Cycles;
 
 /// <summary>
 /// Алгоритм определения всех простых чисел от 1 до <see cref="int.MaxValue"/> включительно.

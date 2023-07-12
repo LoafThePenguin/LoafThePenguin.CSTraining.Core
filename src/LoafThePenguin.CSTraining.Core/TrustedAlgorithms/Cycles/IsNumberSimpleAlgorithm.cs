@@ -1,4 +1,4 @@
-namespace LoafThePenguin.CSTraining.Core.Cycles;
+namespace LoafThePenguin.CSTraining.Core.TrustedAlgorithms.Cycles;
 
 /// <summary>
 /// Алгоритм проверки на простоту числа.
@@ -10,7 +10,7 @@ public sealed class IsNumberSimpleAlgorithm : IAlgorithm<int, bool>
     /// </summary>
     public IsNumberSimpleAlgorithm()
     {
-        
+
     }
 
     /// <summary>

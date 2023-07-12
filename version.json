@@ -19,6 +19,7 @@
     ":!/.editorconfig",
     ":!/.github/",
     ":!/tests/",
+    ":!/console/",
     ":!/nuget.config"
   ],
   "gitCommitIdShortFixedLength": 3,
