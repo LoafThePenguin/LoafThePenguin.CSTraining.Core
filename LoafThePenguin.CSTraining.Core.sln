@@ -23,6 +23,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{FFD38B09-1489-4F24-9498-32A66C3AA06B}"
 	ProjectSection(SolutionItems) = preProject
 		.github\workflows\Package.yml = .github\workflows\Package.yml
+		.github\workflows\SonarCheck.yml = .github\workflows\SonarCheck.yml
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "console", "console", "{A0F2D259-0CEC-4360-B729-08521AD959B8}"
