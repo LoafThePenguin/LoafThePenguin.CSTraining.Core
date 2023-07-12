@@ -27,7 +27,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "console", "console", "{A0F2D259-0CEC-4360-B729-08521AD959B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoafThePenguin.CSTraining.AllSimpleNumbersToIntMaxValueAlgorithm", "console\LoafThePenguin.CSTraining.AllSimpleNumbersToIntMaxValueAlgorithm\LoafThePenguin.CSTraining.AllSimpleNumbersToIntMaxValueAlgorithm.csproj", "{C6842EC9-2F48-4E3D-8632-0727CA53F7E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoafThePenguin.CSTraining.AllSimpleNumbersToIntMaxValueAlgorithm", "console\LoafThePenguin.CSTraining.AllSimpleNumbersToIntMaxValueAlgorithm\LoafThePenguin.CSTraining.AllSimpleNumbersToIntMaxValueAlgorithm.csproj", "{C6842EC9-2F48-4E3D-8632-0727CA53F7E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoafThePenguin.CSTraining.Core.DigitsSumAlgorithm", "console\LoafThePenguin.CSTraining.Core.DigitsSumAlgorithm\LoafThePenguin.CSTraining.Core.DigitsSumAlgorithm.csproj", "{DA0B35C9-BC16-464D-ACED-C2E31083B039}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{9ED81EA0-8074-48C4-9350-FF279B249F6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoafThePenguin.CSTraining.Core.Tests", "tests\LoafThePenguin.CSTraining.Core.Tests\LoafThePenguin.CSTraining.Core.Tests.csproj", "{EFCA0AF9-CA6E-4E47-9F79-6C326DB358E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +49,14 @@ Global
 		{C6842EC9-2F48-4E3D-8632-0727CA53F7E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6842EC9-2F48-4E3D-8632-0727CA53F7E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6842EC9-2F48-4E3D-8632-0727CA53F7E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA0B35C9-BC16-464D-ACED-C2E31083B039}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA0B35C9-BC16-464D-ACED-C2E31083B039}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA0B35C9-BC16-464D-ACED-C2E31083B039}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA0B35C9-BC16-464D-ACED-C2E31083B039}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFCA0AF9-CA6E-4E47-9F79-6C326DB358E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFCA0AF9-CA6E-4E47-9F79-6C326DB358E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFCA0AF9-CA6E-4E47-9F79-6C326DB358E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFCA0AF9-CA6E-4E47-9F79-6C326DB358E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -51,6 +65,8 @@ Global
 		{A87AE169-383E-4E07-870D-12764D0FCB9F} = {41BBB24E-051E-4EA8-B880-FB0EE61CF86A}
 		{FFD38B09-1489-4F24-9498-32A66C3AA06B} = {F6179179-47FB-4792-83DA-D1F54B0CDDCB}
 		{C6842EC9-2F48-4E3D-8632-0727CA53F7E4} = {A0F2D259-0CEC-4360-B729-08521AD959B8}
+		{DA0B35C9-BC16-464D-ACED-C2E31083B039} = {A0F2D259-0CEC-4360-B729-08521AD959B8}
+		{EFCA0AF9-CA6E-4E47-9F79-6C326DB358E0} = {9ED81EA0-8074-48C4-9350-FF279B249F6D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {61359228-8BB1-4C77-9367-2B4ABD2971CC}

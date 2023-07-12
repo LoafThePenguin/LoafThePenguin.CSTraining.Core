@@ -10,7 +10,7 @@ public sealed class IsNumberEvenAlgorithm : IAlgorithm<int, bool>
     /// </summary>
     public IsNumberEvenAlgorithm()
     {
-        
+
     }
 
     /// <summary>
