@@ -6,6 +6,11 @@ internal class Program
 {
     private static readonly DigitsSumAlgorithm _digitsSumAlgorithm = new();
 
+    protected Program()
+    {
+
+    }
+
     private static void Main()
     {
         Console.WriteLine(_digitsSumAlgorithm.Run(1235));
