@@ -11,6 +11,7 @@ on:
       - '.gitignore'
       - 'version.json'
       - 'LICENSE'
+      - 'console'
 jobs:
   sonar:
     name: Build and analyze
