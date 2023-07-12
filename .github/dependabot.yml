@@ -3,7 +3,7 @@
 version: 2
 updates:
   - package-ecosystem: "nuget"
-    directory: "/"
+    directory: "/nuget.config"
     schedule:
       interval: "daily"
     rebase-strategy: "disabled"
