@@ -1,8 +1,8 @@
-using LoafThePenguin.CSTraining.Core.TrustedAlgorithms.Condition;
-
 #pragma warning disable CS1591 // Отсутствует комментарий XML для открытого видимого типа или члена
 
-namespace LoafThePenguin.CSTraining.Core.Tests.Conditions;
+using LoafThePenguin.CSTraining.Core.Basic.Condition;
+
+namespace LoafThePenguin.CSTraining.Core.Tests.Tasks.Basic;
 
 public sealed class IsNumberEvenAlgorithmTests
 {

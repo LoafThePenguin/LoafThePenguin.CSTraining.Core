@@ -1,6 +1,6 @@
-using LoafThePenguin.CSTraining.Core.TrustedAlgorithms.Cycles;
+using LoafThePenguin.CSTraining.Core.Basic.Cycles;
 
-namespace LoafThePenguin.CSTraining.Core.Tests.Cycles;
+namespace LoafThePenguin.CSTraining.Core.Tests.Tasks.Basic;
 
 #pragma warning disable CS1591 // Отсутствует комментарий XML для открытого видимого типа или члена
 

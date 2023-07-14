@@ -1,11 +1,7 @@
-using System.Collections.Concurrent;
-using System.Drawing;
-using static System.Runtime.InteropServices.JavaScript.JSType;
-
-namespace LoafThePenguin.CSTraining.Core.TrustedAlgorithms.Cycles;
+namespace LoafThePenguin.CSTraining.Core.Basic.Cycles;
 
 /// <summary>
-/// Алгоритм определения всех простых чисел от 1 до <see cref="int.MaxValue"/> включительно.
+/// Алгоритм определения всех простых чисел в дипазоне от 1 до <see cref="int.MaxValue"/> включительно.
 /// </summary>
 public sealed class AllSimpleNumbersToIntMaxValueAlgorithm : IAlgorithm<int, IEnumerable<int>>
 {
