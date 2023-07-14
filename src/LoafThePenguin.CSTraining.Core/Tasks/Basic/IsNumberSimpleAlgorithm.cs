@@ -1,4 +1,4 @@
-namespace LoafThePenguin.CSTraining.Core.TrustedAlgorithms.Cycles;
+namespace LoafThePenguin.CSTraining.Core.Basic.Cycles;
 
 /// <summary>
 /// Алгоритм проверки на простоту числа.

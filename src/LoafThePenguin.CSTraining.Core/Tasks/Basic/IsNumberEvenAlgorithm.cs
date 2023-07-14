@@ -1,4 +1,4 @@
-namespace LoafThePenguin.CSTraining.Core.TrustedAlgorithms.Condition;
+namespace LoafThePenguin.CSTraining.Core.Basic.Condition;
 
 /// <summary>
 /// Алгоритм проверки числа на чётность.

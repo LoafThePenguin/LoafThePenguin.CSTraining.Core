@@ -1,4 +1,4 @@
-namespace LoafThePenguin.CSTraining.Core.TrustedAlgorithms.Cycles;
+namespace LoafThePenguin.CSTraining.Core.Basic.Cycles;
 
 /// <summary>
 /// Алгоритм преобразования числа на зеркальное значение.
@@ -13,7 +13,7 @@ public sealed class ReverseNumberAlgorithm : IAlgorithm<int, int>
     /// </summary>
     public ReverseNumberAlgorithm()
     {
-        
+
     }
 
     /// <summary>
@@ -29,7 +29,7 @@ public sealed class ReverseNumberAlgorithm : IAlgorithm<int, int>
     {
         int reversed = 0;
 
-        while(input > 0)
+        while (input > 0)
         {
             reversed *= 10;
             reversed += input % 10;
