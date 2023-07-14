@@ -2,8 +2,6 @@ using LoafThePenguin.CSTraining.Core.Basic.Cycles;
 
 namespace LoafThePenguin.CSTraining.Core.Tests.Tasks.Basic;
 
-#pragma warning disable CS1591 // Отсутствует комментарий XML для открытого видимого типа или члена
-
 public sealed class ReverseNumberAlgorithmTests
 {
     private const int TIMEOUT = 1000;
@@ -25,5 +23,3 @@ public sealed class ReverseNumberAlgorithmTests
         Assert.Equal(exptected, _algorithm.Run(number));
     }
 }
-
-#pragma warning restore CS1591 // Отсутствует комментарий XML для открытого видимого типа или члена

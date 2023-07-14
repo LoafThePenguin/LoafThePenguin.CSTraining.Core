@@ -2,8 +2,6 @@ using LoafThePenguin.CSTraining.Core.Basic.Cycles;
 
 namespace LoafThePenguin.CSTraining.Core.Tests.Tasks.Basic;
 
-#pragma warning disable CS1591 // Отсутствует комментарий XML для открытого видимого типа или члена
-
 public sealed class AllSimpleNumbersToIntMaxValueAlgorithmTests
 {
     private const int TIMEOUT = 1000;
@@ -24,5 +22,3 @@ public sealed class AllSimpleNumbersToIntMaxValueAlgorithmTests
         Assert.Equal(values, actual);
     }
 }
-
-#pragma warning restore CS1591 // Отсутствует комментарий XML для открытого видимого типа или члена
