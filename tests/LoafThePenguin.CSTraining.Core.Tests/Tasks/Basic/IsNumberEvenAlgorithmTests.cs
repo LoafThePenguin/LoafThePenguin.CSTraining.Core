@@ -1,5 +1,3 @@
-#pragma warning disable CS1591 // Отсутствует комментарий XML для открытого видимого типа или члена
-
 using LoafThePenguin.CSTraining.Core.Basic.Condition;
 
 namespace LoafThePenguin.CSTraining.Core.Tests.Tasks.Basic;
