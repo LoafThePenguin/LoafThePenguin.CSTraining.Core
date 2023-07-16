@@ -3,7 +3,7 @@ namespace LoafThePenguin.CSTraining.Core.Tasks.CodeWars;
 /// <summary>
 /// Выдает персонализированное приветствие.
 /// </summary>
-public sealed class PersonalizedMessage : IAlgorithm<string, string, string>
+public sealed class PersonalizedMessageAlgorithm : IAlgorithm<string, string, string>
 {
     /// <summary>
     /// Сообщение при равенстве параметров.
@@ -18,7 +18,7 @@ public sealed class PersonalizedMessage : IAlgorithm<string, string, string>
     /// <summary>
     /// Создаёт алгоритм возврата персонализированного приветствия.
     /// </summary>
-    public PersonalizedMessage()
+    public PersonalizedMessageAlgorithm()
     {
         
     }
