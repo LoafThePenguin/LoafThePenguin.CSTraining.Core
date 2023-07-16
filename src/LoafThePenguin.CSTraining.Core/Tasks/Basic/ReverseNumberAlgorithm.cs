@@ -29,12 +29,12 @@ public sealed class ReverseNumberAlgorithm : IAlgorithm<int, int>
     {
         int reversed = 0;
 
-        while (input > 0)
+        do
         {
             reversed *= 10;
             reversed += input % 10;
             input /= 10;
-        }
+        } while (input != 0);
 
         return reversed;
     }

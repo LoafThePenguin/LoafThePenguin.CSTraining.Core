@@ -18,6 +18,8 @@ public sealed class ReverseNumberAlgorithmTests
     [InlineData(10, 1)]
     [InlineData(1000, 1)]
     [InlineData(12340, 4321)]
+    [InlineData(-1230, -321)]
+    [InlineData(-1232, -2321)]
     public void ReverseNumber(int number, int exptected)
     {
         Assert.Equal(exptected, _algorithm.Run(number));
