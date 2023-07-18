@@ -1,4 +1,3 @@
-using System.Numerics;
 using LoafThePenguin.Helpers;
 
 namespace LoafThePenguin.CSTraining.Core.Tasks.Basic;
