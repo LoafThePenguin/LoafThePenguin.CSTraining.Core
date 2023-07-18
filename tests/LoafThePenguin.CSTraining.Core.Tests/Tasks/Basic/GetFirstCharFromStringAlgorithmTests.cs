@@ -1,4 +1,3 @@
-using LoafThePenguin.CSTraining.Core.Basic.Cycles;
 using LoafThePenguin.CSTraining.Core.Tasks.Basic;
 
 namespace LoafThePenguin.CSTraining.Core.Tests.Tasks.Basic;
