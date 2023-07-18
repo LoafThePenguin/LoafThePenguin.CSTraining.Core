@@ -34,7 +34,7 @@ public sealed class GetCharFromStringAlgorithm : IAlgorithm<string, int, char?>
     /// </exception>
     public char? Run(string input, int index)
     {
-        _ = ThrowHelper.ThrowIfNull(input);
+        _ = ThrowHelper.ThrowIfArgumentNull(input);
 
         if (input.Length <= index)
         {
