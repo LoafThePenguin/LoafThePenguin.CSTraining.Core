@@ -12,10 +12,10 @@ public sealed class PersonalizedMessageAlgorithmTests
     public PersonalizedMessageAlgorithmTests() => _algorithm = new PersonalizedMessageAlgorithm();
 
     [Theory(Timeout = TIMEOUT, DisplayName = DISPLAY_NAME)]
-    [InlineData("Vasya", "Greg", Core.Tasks.CodeWars.PersonalizedMessageAlgorithm.NON_EQUAL_MESSAGE)]
-    [InlineData("Misha", "Misha", Core.Tasks.CodeWars.PersonalizedMessageAlgorithm.EQUAL_MESSAGE)]
-    [InlineData("", "Misha", Core.Tasks.CodeWars.PersonalizedMessageAlgorithm.NON_EQUAL_MESSAGE)]
-    [InlineData("", "", Core.Tasks.CodeWars.PersonalizedMessageAlgorithm.EQUAL_MESSAGE)]
+    [InlineData("Vasya", "Greg", PersonalizedMessageAlgorithm.NON_EQUAL_MESSAGE)]
+    [InlineData("Misha", "Misha", PersonalizedMessageAlgorithm.EQUAL_MESSAGE)]
+    [InlineData("", "Misha", PersonalizedMessageAlgorithm.NON_EQUAL_MESSAGE)]
+    [InlineData("", "", PersonalizedMessageAlgorithm.EQUAL_MESSAGE)]
     public void PersonalizedMessage(string name, string owner, string expected)
     {
         Assert.Equal(expected, _algorithm.Run(name, owner));
