@@ -1,4 +1,4 @@
-﻿using LoafThePenguin.CSTraining.Core.Tasks.Basic;
+using LoafThePenguin.CSTraining.Core.Tasks.Basic;
 
 namespace LoafThePenguin.CSTraining.Core.Tests.Tasks.Basic;
 
