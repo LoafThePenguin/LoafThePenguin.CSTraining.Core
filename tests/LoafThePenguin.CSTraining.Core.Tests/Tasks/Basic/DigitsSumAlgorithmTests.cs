@@ -15,8 +15,8 @@ public sealed class DigitsSumAlgorithmTests
     [InlineData(-123, 6)]
     [InlineData(0, 0)]
     [InlineData(548932, 31)]
-    public void DigitsSum(int number, int excepted)
+    public void DigitsSum(int number, int expected)
     {
-        Assert.Equal(excepted, _algorithm.Run(number));
+        Assert.Equal(expected, _algorithm.Run(number));
     }
 }
