@@ -6,7 +6,7 @@ public sealed class GetFirstCharFromStringAlgorithmTests
 {
     private const int TIMEOUT = 1000;
     private const string DISPLAY_NAME = "Первая буква строки";
-    private const string NRE_THROWS = $"Выбрасывает {nameof(ArgumentNullException)}";
+    private const string ANE_THROWS = $"Выбрасывает {nameof(ArgumentNullException)}";
 
     private readonly GetFirstCharFromStringAlgorithm _algorithm;
 
@@ -22,9 +22,9 @@ public sealed class GetFirstCharFromStringAlgorithmTests
         Assert.Equal(expected, _algorithm.Run(str));
     }
 
-    [Fact(Timeout = TIMEOUT, DisplayName = NRE_THROWS)]
-    public void Throws_NRE()
+    [Fact(Timeout = TIMEOUT, DisplayName = ANE_THROWS)]
+    public void Throws_ANE()
     {
-        Assert.Throws<NullReferenceException>(() => _algorithm.Run(null!));
+        Assert.Throws<ArgumentNullException>(() => _algorithm.Run(null!));
     }
 }

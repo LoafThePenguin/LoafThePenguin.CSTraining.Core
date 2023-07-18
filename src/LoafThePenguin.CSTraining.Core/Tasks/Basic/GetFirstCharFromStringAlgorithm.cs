@@ -35,7 +35,7 @@ public sealed class GetFirstCharFromStringAlgorithm : IAlgorithm<string, char?>
     /// </exception>
     public char? Run(string input)
     {
-        _ = ThrowHelper.ThrowIfNull(input);
+        _ = ThrowHelper.ThrowIfArgumentNull(input);
 
         return _algorithm.Run(input, 0);
     }
