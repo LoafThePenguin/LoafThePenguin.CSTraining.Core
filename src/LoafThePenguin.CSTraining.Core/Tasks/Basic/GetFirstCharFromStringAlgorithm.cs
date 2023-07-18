@@ -6,33 +6,38 @@ namespace LoafThePenguin.CSTraining.Core.Tasks.Basic;
 /// <summary>
 /// Алгоритм получения первой буквы строки.
 /// </summary>
+/// <exception cref="NullReferenceException"/>
 public sealed class GetFirstCharFromStringAlgorithm : IAlgorithm<string, char?>
 {
+    private readonly GetCharFromStringAlgorithm _algorithm;
+
     /// <summary>
-    /// Создаёт экземпляр алгоритм получения первой буквы строки.
+    /// Создаёт экземпляр алгоритма получения первой буквы строки.
     /// </summary>
     public GetFirstCharFromStringAlgorithm()
     {
-
+        _algorithm = new GetCharFromStringAlgorithm();
     }
 
     /// <summary>
     /// <inheritdoc/>
-    /// Возвращает первую букву строки или <see langword="null"/>, если длина <paramref name="input"/> равна 0.
+    /// Возвращает первую букву строки или <see langword="null"/>, 
+    /// если длина <paramref name="input"/> равна 0.
     /// </summary>
     /// <param name="input">
     /// <inheritdoc/>
     /// </param>
-    /// <returns>Первая буква строки или <see langword="null"/>, если длина <paramref name="input"/> равна 0.</returns>
+    /// <returns>
+    /// Первая буква строки или <see langword="null"/>, 
+    /// если длина <paramref name="input"/> равна 0.
+    /// </returns>
+    /// <exception cref="NullReferenceException">
+    /// Выбрасывается, когда <paramref name="input"/> является <see langword="null"/>.
+    /// </exception>
     public char? Run(string input)
     {
         _ = ThrowHelper.ThrowIfNull(input);
 
-        if (input.Length == 0)
-        {
-            return null;
-        }
-
-        return input[0];
+        return _algorithm.Run(input, 0);
     }
 }
