@@ -4,4 +4,7 @@
       Обучение C#
     </Description>
   </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="LoafThePenguin.Helpers" Version="1.0.6" />
+  </ItemGroup>
 </Project>
