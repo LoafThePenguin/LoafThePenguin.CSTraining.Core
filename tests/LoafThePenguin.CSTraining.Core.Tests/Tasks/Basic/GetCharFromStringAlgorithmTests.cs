@@ -1,4 +1,4 @@
-﻿using LoafThePenguin.CSTraining.Core.Tasks.Basic;
+using LoafThePenguin.CSTraining.Core.Tasks.Basic;
 
 namespace LoafThePenguin.CSTraining.Core.Tests.Tasks.Basic;
 
@@ -6,7 +6,7 @@ public sealed class GetCharFromStringAlgorithmTests
 {
     private const int TIMEOUT = 1000;
     private const string DISPLAY_NAME = "Буква строки";
-    private const string NRE_THROWS = $"Выбрасывает {nameof(ArgumentNullException)}";
+    private const string ANE_THROWS = $"Выбрасывает {nameof(ArgumentNullException)}";
 
     private readonly GetCharFromStringAlgorithm _algorithm;
 
@@ -25,9 +25,9 @@ public sealed class GetCharFromStringAlgorithmTests
         Assert.Equal(expected, _algorithm.Run(str, index));
     }
 
-    [Fact(Timeout = TIMEOUT, DisplayName = NRE_THROWS)]
-    public void Throws_NRE()
+    [Fact(Timeout = TIMEOUT, DisplayName = ANE_THROWS)]
+    public void Throws_ANE()
     {
-        Assert.Throws<NullReferenceException>(() => _algorithm.Run(null!, 0));
+        Assert.Throws<ArgumentNullException>(() => _algorithm.Run(null!, 0));
     }
 }
