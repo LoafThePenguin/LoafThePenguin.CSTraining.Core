@@ -50,6 +50,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          NUGET_REPOSITORY_TOKEN: ${{ secrets.NUGET_REPOSITORY_TOKEN }}
         shell: powershell
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"LoafThePenguin_LoafThePenguin.CSTraining.Core" /o:"loafthepenguin" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.vscoveragexml.reportsPaths=coverage.xml
@@ -72,6 +73,8 @@ jobs:
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
       - name: Pack Package
+        env:
+          NUGET_REPOSITORY_TOKEN: ${{ secrets.NUGET_REPOSITORY_TOKEN }}
         run: dotnet pack "src/LoafThePenguin.CSTraining.Core/LoafThePenguin.CSTraining.Core.csproj" -c Release
       - name: Push Package
         run: dotnet nuget push "**/artifacts/Release/nupkg/*.nupkg" --api-key ${{ secrets.GITHUB_TOKEN }} -s "LoafThePenguin" --skip-duplicate --no-symbols
@@ -93,6 +96,8 @@ jobs:
       - run: echo "previous_tag=$(git describe --tags --abbrev=0 2>/dev/null || echo '')" >> $GITHUB_ENV
       - run: "echo 'New tag: ${{ steps.nbgv.outputs.SemVer2 }}'"
       - name: Create Tag
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         id: create_tag
         if: (env.previous_tag || env.previous_tag=='')
         run: | 
