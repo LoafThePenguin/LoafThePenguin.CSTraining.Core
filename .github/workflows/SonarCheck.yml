@@ -49,6 +49,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          NUGET_REPOSITORY_TOKEN: ${{ secrets.NUGET_REPOSITORY_TOKEN }}
         shell: powershell
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"LoafThePenguin_LoafThePenguin.CSTraining.Core" /o:"loafthepenguin" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.vscoveragexml.reportsPaths=coverage.xml /d:sonar.coverage.exclusions="console/*"
