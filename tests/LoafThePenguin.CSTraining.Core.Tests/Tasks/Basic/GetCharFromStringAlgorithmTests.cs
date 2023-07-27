@@ -8,9 +8,9 @@ public sealed class GetCharFromStringAlgorithmTests
     private const string DISPLAY_NAME = "Буква строки";
     private const string ANE_THROWS = $"Выбрасывает {nameof(ArgumentNullException)}";
 
-    private readonly GetCharFromStringAlgorithm _algorithm;
+    private readonly GetCharFromStringByIndexAlgorithm _algorithm;
 
-    public GetCharFromStringAlgorithmTests() => _algorithm = new GetCharFromStringAlgorithm();
+    public GetCharFromStringAlgorithmTests() => _algorithm = new GetCharFromStringByIndexAlgorithm();
 
     [Theory(Timeout = TIMEOUT, DisplayName = DISPLAY_NAME)]
     [InlineData("", 1, null)]

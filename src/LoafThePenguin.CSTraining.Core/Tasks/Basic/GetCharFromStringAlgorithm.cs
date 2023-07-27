@@ -5,12 +5,12 @@ namespace LoafThePenguin.CSTraining.Core.Tasks.Basic;
 /// <summary>
 /// Алгоритм получения буквы строки.
 /// </summary>
-public sealed class GetCharFromStringAlgorithm : IAlgorithm<string, int, char?>
+public sealed class GetCharFromStringByIndexAlgorithm : IAlgorithm<string, int, char?>
 {
     /// <summary>
     /// Создаёт экземпляр алгоритма получения буквы строки.
     /// </summary>
-    public GetCharFromStringAlgorithm()
+    public GetCharFromStringByIndexAlgorithm()
     {
 
     }
