@@ -8,14 +8,14 @@ namespace LoafThePenguin.CSTraining.Core.Tasks.Basic;
 /// <exception cref="NullReferenceException"/>
 public sealed class GetFirstCharFromStringAlgorithm : IAlgorithm<string, char?>
 {
-    private readonly GetCharFromStringAlgorithm _algorithm;
+    private readonly GetCharFromStringByIndexAlgorithm _algorithm;
 
     /// <summary>
     /// Создаёт экземпляр алгоритма получения первой буквы строки.
     /// </summary>
     public GetFirstCharFromStringAlgorithm()
     {
-        _algorithm = new GetCharFromStringAlgorithm();
+        _algorithm = new GetCharFromStringByIndexAlgorithm();
     }
 
     /// <summary>
