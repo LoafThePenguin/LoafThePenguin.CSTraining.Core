@@ -2,15 +2,16 @@ using LoafThePenguin.CSTraining.Core.Tasks.Basic;
 
 namespace LoafThePenguin.CSTraining.Core.Tests.Tasks.Basic;
 
-public sealed class GetCharFromStringAlgorithmTests
+public sealed class GetCharFromStringByIndexAlgorithmTests
 {
     private const int TIMEOUT = 1000;
-    private const string DISPLAY_NAME = "Буква строки";
+    private const string DISPLAY_NAME = "Буква строки по индексу";
     private const string ANE_THROWS = $"Выбрасывает {nameof(ArgumentNullException)}";
+    private const string IOORE_THROWS = $"Выбрасывает {nameof(IndexOutOfRangeException)}";
 
     private readonly GetCharFromStringByIndexAlgorithm _algorithm;
 
-    public GetCharFromStringAlgorithmTests() => _algorithm = new GetCharFromStringByIndexAlgorithm();
+    public GetCharFromStringByIndexAlgorithmTests() => _algorithm = new GetCharFromStringByIndexAlgorithm();
 
     [Theory(Timeout = TIMEOUT, DisplayName = DISPLAY_NAME)]
     [InlineData("", 1, null)]
@@ -21,7 +22,7 @@ public sealed class GetCharFromStringAlgorithmTests
     [InlineData("abc", 0, 'a')]
     [InlineData("GFsdgh", 5, 'h')]
     [InlineData("GFsdgh", 6, null)]
-    public void GetCharFromString(string str, int index, char? expected)
+    public void GetCharFromStringByIndex(string str, int index, char? expected)
     {
         Assert.Equal(expected, _algorithm.Run(str, index));
     }
@@ -30,5 +31,11 @@ public sealed class GetCharFromStringAlgorithmTests
     public void Throws_ANE()
     {
         Assert.Throws<ArgumentNullException>(() => _algorithm.Run(null!, 0));
+    }
+
+    [Fact(Timeout = TIMEOUT, DisplayName = IOORE_THROWS)]
+    public void Throws_IOoRE()
+    {
+        Assert.Throws<IndexOutOfRangeException>(() => _algorithm.Run("abc", -1));
     }
 }
