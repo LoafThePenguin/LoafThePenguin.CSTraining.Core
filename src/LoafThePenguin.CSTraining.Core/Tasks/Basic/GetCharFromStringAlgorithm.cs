@@ -17,10 +17,10 @@ public sealed class GetCharFromStringAlgorithm : IAlgorithm<string, int, char?>
 
     /// <summary>
     /// <inheritdoc/>
-    /// Возвращает первую строки с индексом <paramref name="index"/> или <see langword="null"/>, если длина <paramref name="input"/> меньше либо равна <paramref name="index"/>.
+    /// Возвращает символ строки с индексом <paramref name="index"/> или <see langword="null"/>, если длина <paramref name="input"/> меньше либо равна <paramref name="index"/>.
     /// </summary>
     /// <param name="input">
-    /// <inheritdoc/>
+    /// Строка.
     /// </param>
     /// <param name="index">
     /// Индекс.
