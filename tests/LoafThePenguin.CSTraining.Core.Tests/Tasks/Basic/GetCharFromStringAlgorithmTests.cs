@@ -20,6 +20,7 @@ public sealed class GetCharFromStringAlgorithmTests
     [InlineData("9300234c", 3, '0')]
     [InlineData("abc", 0, 'a')]
     [InlineData("GFsdgh", 5, 'h')]
+    [InlineData("GFsdgh", 6, null)]
     public void GetCharFromString(string str, int index, char? expected)
     {
         Assert.Equal(expected, _algorithm.Run(str, index));
